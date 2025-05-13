@@ -1,0 +1,80 @@
+git version
+Displays the installed Git version.
+
+git --version
+------------------------------------
+
+git config
+Sets Git configuration values like username and email.
+
+
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+-------------------------------------------
+
+git add
+Stages changes to be committed.
+
+
+git add file.html       # Add a specific file  
+git add .               # Add all changed files
+--------------------------------------------------
+
+git status
+Shows the current state of the working directory and staging area.
+
+
+git status
+git status -s
+------------------------------------------------------
+
+git reset
+Unstages files or removes commits.
+
+
+git reset file.html           # Unstage a file  
+git reset --soft HEAD~1       # Remove last commit and keep changes staged  
+git reset --hard HEAD~1       # Remove last commit and discard changes
+-----------------------------------------------------------------
+
+git commit
+Saves staged changes as a commit.
+
+
+git commit -m "Your commit message"
+-----------------------------------------------------
+
+git log
+Shows the commit history.
+
+
+git log
+git log --oneline
+------------------------------------------------------
+git rebase
+Reapplies commits on top of another base tip to clean up history.
+
+git rebase main               # Rebase current branch onto main  
+git rebase -i HEAD~3          # Interactively edit last 3 commits
+------------------------------------------------------------
+
+git restore
+Restores file contents to a previous state.
+
+git restore file.html             # Discard changes in working directory  
+git restore --staged file.html    # Unstage file without discarding changes
+-----------------------------------------------------------------
+
+git diff
+Shows changes between commits, working directory, and staging area.
+
+
+git diff             # Show unstaged changes  
+git diff --staged    # Show staged changes
+---------------------------------------------------------------------
+
+ Where to write ignore values for all repos?
+Create a global .gitignore file and configure Git to use it:
+
+
+git config --global core.excludesfile ~/.gitignore_global
